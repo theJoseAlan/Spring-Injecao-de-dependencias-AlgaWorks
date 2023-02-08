@@ -5,12 +5,12 @@ import com.algaworks.algafood.di.notification.Notificador;
 import com.algaworks.algafood.di.notification.NotificadorEmail;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class AtivacaoClienteService {
 
     public Notificador notificador;
 
-    public AtivacaoClienteService(NotificadorEmail notificador) {
+    public AtivacaoClienteService(Notificador notificador) {
         this.notificador = notificador;
 
         System.out.println("AtivacaoClienteService "+notificador);
