@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @TipoDoNotificador(NivelUrgencia.SEM_URGENCIA)
 @Component
-@Profile("Dev") //Roda no desenvolvimento. Mas o aplication.proprierties deve ser alterado
+@Profile("dev") //Roda no desenvolvimento. Mas o aplication.proprierties deve ser alterado
 public class NotificadoremailMock implements Notificador{
 
     public NotificadoremailMock() {
