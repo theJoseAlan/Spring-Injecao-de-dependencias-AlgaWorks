@@ -3,6 +3,7 @@ package com.algaworks.algafood.di.service;
 import com.algaworks.algafood.di.modelo.Cliente;
 import com.algaworks.algafood.di.notification.Notificador;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @Component
 public class AtivacaoClienteService {
 
+    @Qualifier("urgente") //O id facilita a alteração no @Autowared
     @Autowired(required = false) //Ponto de injeção via atributo
     //O required false faz com que não dependa do component em NotificadorEmail
     //Se descomentar o @component do NotificadorEmail, o if lá embaixo vai ser ativadoNotificadorEmail

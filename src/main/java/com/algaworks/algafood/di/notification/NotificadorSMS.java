@@ -1,8 +1,10 @@
 package com.algaworks.algafood.di.notification;
 
 import com.algaworks.algafood.di.modelo.Cliente;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+@Qualifier("normal") //Esse id é interessante para indicar a prioridade
 @Component //Para ser reconhecida como um componente Spring
 public class NotificadorSMS implements Notificador{
 
