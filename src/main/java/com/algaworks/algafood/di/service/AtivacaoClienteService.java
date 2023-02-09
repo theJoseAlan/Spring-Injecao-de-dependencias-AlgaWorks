@@ -1,12 +1,11 @@
 package com.algaworks.algafood.di.service;
 
 import com.algaworks.algafood.di.modelo.Cliente;
+import com.algaworks.algafood.di.notification.NivelUrgencia;
 import com.algaworks.algafood.di.notification.Notificador;
+import com.algaworks.algafood.di.notification.TipoDoNotificador;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 //O ideal é usar pontos de injeção no construtor, para identificar as depend~encias daquela classe
 //No atributo, ele dificulta os testes
@@ -14,7 +13,8 @@ import java.util.List;
 @Component
 public class AtivacaoClienteService {
 
-    @Qualifier("urgente") //O id facilita a alteração no @Autowared
+    //@Qualifier("urgente") //O id facilita a alteração no @Autowared
+    @TipoDoNotificador(NivelUrgencia.SEM_URGENCIA)
     @Autowired(required = false) //Ponto de injeção via atributo
     //O required false faz com que não dependa do component em NotificadorEmail
     //Se descomentar o @component do NotificadorEmail, o if lá embaixo vai ser ativadoNotificadorEmail
