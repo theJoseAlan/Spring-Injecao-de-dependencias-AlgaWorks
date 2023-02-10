@@ -11,4 +11,6 @@ public @interface TipoDoNotificador {
 
     NivelUrgencia value(); //Valor padrão
 
+
+
 }
